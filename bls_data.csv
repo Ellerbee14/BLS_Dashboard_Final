@@ -1,0 +1,736 @@
+date,value,series_name
+2026-03-01,170087.0,Civilian Labor Force
+2026-02-01,170483.0,Civilian Labor Force
+2026-01-01,170465.0,Civilian Labor Force
+2025-12-01,171495.0,Civilian Labor Force
+2025-11-01,171541.0,Civilian Labor Force
+2025-10-01,,Civilian Labor Force
+2025-09-01,171261.0,Civilian Labor Force
+2025-08-01,170750.0,Civilian Labor Force
+2025-07-01,170412.0,Civilian Labor Force
+2025-06-01,170380.0,Civilian Labor Force
+2025-05-01,170492.0,Civilian Labor Force
+2025-04-01,171054.0,Civilian Labor Force
+2025-03-01,170641.0,Civilian Labor Force
+2025-02-01,170441.0,Civilian Labor Force
+2025-01-01,170696.0,Civilian Labor Force
+2024-12-01,168506.0,Civilian Labor Force
+2024-11-01,168248.0,Civilian Labor Force
+2024-10-01,168395.0,Civilian Labor Force
+2024-09-01,168662.0,Civilian Labor Force
+2024-08-01,168492.0,Civilian Labor Force
+2024-07-01,168395.0,Civilian Labor Force
+2024-06-01,168034.0,Civilian Labor Force
+2024-05-01,167807.0,Civilian Labor Force
+2024-04-01,167923.0,Civilian Labor Force
+2024-03-01,167983.0,Civilian Labor Force
+2024-02-01,167569.0,Civilian Labor Force
+2024-01-01,167308.0,Civilian Labor Force
+2023-12-01,167388.0,Civilian Labor Force
+2023-11-01,168090.0,Civilian Labor Force
+2023-10-01,167661.0,Civilian Labor Force
+2023-09-01,167725.0,Civilian Labor Force
+2023-08-01,167760.0,Civilian Labor Force
+2023-07-01,167169.0,Civilian Labor Force
+2023-06-01,166958.0,Civilian Labor Force
+2023-05-01,166896.0,Civilian Labor Force
+2023-04-01,166674.0,Civilian Labor Force
+2023-03-01,166707.0,Civilian Labor Force
+2023-02-01,166443.0,Civilian Labor Force
+2023-01-01,165943.0,Civilian Labor Force
+2022-12-01,164983.0,Civilian Labor Force
+2022-11-01,164402.0,Civilian Labor Force
+2022-10-01,164620.0,Civilian Labor Force
+2022-09-01,164561.0,Civilian Labor Force
+2022-08-01,164653.0,Civilian Labor Force
+2022-07-01,164076.0,Civilian Labor Force
+2022-06-01,164059.0,Civilian Labor Force
+2022-05-01,164372.0,Civilian Labor Force
+2022-04-01,163847.0,Civilian Labor Force
+2022-03-01,164271.0,Civilian Labor Force
+2022-02-01,163978.0,Civilian Labor Force
+2022-01-01,163614.0,Civilian Labor Force
+2021-12-01,162466.0,Civilian Labor Force
+2021-11-01,162243.0,Civilian Labor Force
+2021-10-01,161736.0,Civilian Labor Force
+2021-09-01,161454.0,Civilian Labor Force
+2021-08-01,161527.0,Civilian Labor Force
+2021-07-01,161543.0,Civilian Labor Force
+2021-06-01,161202.0,Civilian Labor Force
+2021-05-01,160806.0,Civilian Labor Force
+2021-04-01,160799.0,Civilian Labor Force
+2021-03-01,160439.0,Civilian Labor Force
+2021-02-01,160248.0,Civilian Labor Force
+2021-01-01,160081.0,Civilian Labor Force
+2020-12-01,160745.0,Civilian Labor Force
+2020-11-01,160629.0,Civilian Labor Force
+2020-10-01,161003.0,Civilian Labor Force
+2020-09-01,160174.0,Civilian Labor Force
+2020-08-01,160706.0,Civilian Labor Force
+2020-07-01,160132.0,Civilian Labor Force
+2020-06-01,159994.0,Civilian Labor Force
+2020-05-01,158101.0,Civilian Labor Force
+2020-04-01,156269.0,Civilian Labor Force
+2020-03-01,162559.0,Civilian Labor Force
+2020-02-01,164467.0,Civilian Labor Force
+2020-01-01,164377.0,Civilian Labor Force
+2019-12-01,164699.0,Civilian Labor Force
+2019-11-01,164496.0,Civilian Labor Force
+2019-10-01,164416.0,Civilian Labor Force
+2019-09-01,164092.0,Civilian Labor Force
+2019-08-01,163774.0,Civilian Labor Force
+2019-07-01,163590.0,Civilian Labor Force
+2019-06-01,163168.0,Civilian Labor Force
+2019-05-01,162751.0,Civilian Labor Force
+2019-04-01,162586.0,Civilian Labor Force
+2019-03-01,162904.0,Civilian Labor Force
+2019-02-01,162999.0,Civilian Labor Force
+2019-01-01,162963.0,Civilian Labor Force
+2018-12-01,163206.0,Civilian Labor Force
+2018-11-01,162836.0,Civilian Labor Force
+2018-10-01,162602.0,Civilian Labor Force
+2018-09-01,162087.0,Civilian Labor Force
+2018-08-01,161660.0,Civilian Labor Force
+2018-07-01,162341.0,Civilian Labor Force
+2018-06-01,162210.0,Civilian Labor Force
+2018-05-01,161848.0,Civilian Labor Force
+2018-04-01,161771.0,Civilian Labor Force
+2018-03-01,161686.0,Civilian Labor Force
+2018-02-01,161778.0,Civilian Labor Force
+2018-01-01,160914.0,Civilian Labor Force
+2017-12-01,160535.0,Civilian Labor Force
+2017-11-01,160579.0,Civilian Labor Force
+2017-10-01,160309.0,Civilian Labor Force
+2017-09-01,161140.0,Civilian Labor Force
+2017-08-01,160586.0,Civilian Labor Force
+2017-07-01,160462.0,Civilian Labor Force
+2017-06-01,160192.0,Civilian Labor Force
+2017-05-01,160068.0,Civilian Labor Force
+2017-04-01,160345.0,Civilian Labor Force
+2017-03-01,160137.0,Civilian Labor Force
+2017-02-01,159859.0,Civilian Labor Force
+2017-01-01,159620.0,Civilian Labor Force
+2016-12-01,159678.0,Civilian Labor Force
+2016-11-01,159506.0,Civilian Labor Force
+2016-10-01,159605.0,Civilian Labor Force
+2016-09-01,159714.0,Civilian Labor Force
+2016-08-01,159562.0,Civilian Labor Force
+2016-07-01,159194.0,Civilian Labor Force
+2016-06-01,158967.0,Civilian Labor Force
+2016-05-01,158784.0,Civilian Labor Force
+2016-04-01,159141.0,Civilian Labor Force
+2016-03-01,159179.0,Civilian Labor Force
+2016-02-01,158640.0,Civilian Labor Force
+2016-01-01,158280.0,Civilian Labor Force
+2015-12-01,158035.0,Civilian Labor Force
+2015-11-01,157463.0,Civilian Labor Force
+2015-10-01,157167.0,Civilian Labor Force
+2015-09-01,156733.0,Civilian Labor Force
+2015-08-01,157172.0,Civilian Labor Force
+2015-07-01,156997.0,Civilian Labor Force
+2015-06-01,157062.0,Civilian Labor Force
+2015-05-01,157651.0,Civilian Labor Force
+2015-04-01,157060.0,Civilian Labor Force
+2015-03-01,156643.0,Civilian Labor Force
+2015-02-01,156644.0,Civilian Labor Force
+2015-01-01,157030.0,Civilian Labor Force
+2014-12-01,156332.0,Civilian Labor Force
+2014-11-01,156494.0,Civilian Labor Force
+2014-10-01,156417.0,Civilian Labor Force
+2014-09-01,156040.0,Civilian Labor Force
+2014-08-01,156130.0,Civilian Labor Force
+2014-07-01,156007.0,Civilian Labor Force
+2014-06-01,155707.0,Civilian Labor Force
+2014-05-01,155684.0,Civilian Labor Force
+2014-04-01,155369.0,Civilian Labor Force
+2014-03-01,156028.0,Civilian Labor Force
+2014-02-01,155483.0,Civilian Labor Force
+2014-01-01,155352.0,Civilian Labor Force
+2026-03-01,162848.0,Civilian Employment
+2026-02-01,162912.0,Civilian Employment
+2026-01-01,163097.0,Civilian Employment
+2025-12-01,163992.0,Civilian Employment
+2025-11-01,163760.0,Civilian Employment
+2025-10-01,,Civilian Employment
+2025-09-01,163656.0,Civilian Employment
+2025-08-01,163370.0,Civilian Employment
+2025-07-01,163140.0,Civilian Employment
+2025-06-01,163327.0,Civilian Employment
+2025-05-01,163244.0,Civilian Employment
+2025-04-01,163898.0,Civilian Employment
+2025-03-01,163509.0,Civilian Employment
+2025-02-01,163338.0,Civilian Employment
+2025-01-01,163831.0,Civilian Employment
+2024-12-01,161586.0,Civilian Employment
+2024-11-01,161159.0,Civilian Employment
+2024-10-01,161444.0,Civilian Employment
+2024-09-01,161813.0,Civilian Employment
+2024-08-01,161429.0,Civilian Employment
+2024-07-01,161297.0,Civilian Employment
+2024-06-01,161152.0,Civilian Employment
+2024-05-01,161180.0,Civilian Employment
+2024-04-01,161438.0,Civilian Employment
+2024-03-01,161462.0,Civilian Employment
+2024-02-01,161083.0,Civilian Employment
+2024-01-01,161133.0,Civilian Employment
+2023-12-01,161058.0,Civilian Employment
+2023-11-01,161863.0,Civilian Employment
+2023-10-01,161198.0,Civilian Employment
+2023-09-01,161451.0,Civilian Employment
+2023-08-01,161485.0,Civilian Employment
+2023-07-01,161246.0,Civilian Employment
+2023-06-01,160973.0,Civilian Employment
+2023-05-01,160812.0,Civilian Employment
+2023-04-01,160927.0,Civilian Employment
+2023-03-01,160848.0,Civilian Employment
+2023-02-01,160457.0,Civilian Employment
+2023-01-01,160173.0,Civilian Employment
+2022-12-01,159202.0,Civilian Employment
+2022-11-01,158484.0,Civilian Employment
+2022-10-01,158671.0,Civilian Employment
+2022-09-01,158814.0,Civilian Employment
+2022-08-01,158744.0,Civilian Employment
+2022-07-01,158307.0,Civilian Employment
+2022-06-01,158085.0,Civilian Employment
+2022-05-01,158393.0,Civilian Employment
+2022-04-01,157852.0,Civilian Employment
+2022-03-01,158238.0,Civilian Employment
+2022-02-01,157654.0,Civilian Employment
+2022-01-01,157081.0,Civilian Employment
+2021-12-01,156053.0,Civilian Employment
+2021-11-01,155513.0,Civilian Employment
+2021-10-01,154468.0,Civilian Employment
+2021-09-01,153844.0,Civilian Employment
+2021-08-01,153258.0,Civilian Employment
+2021-07-01,152812.0,Civilian Employment
+2021-06-01,151721.0,Civilian Employment
+2021-05-01,151546.0,Civilian Employment
+2021-04-01,151045.0,Civilian Employment
+2021-03-01,150666.0,Civilian Employment
+2021-02-01,150234.0,Civilian Employment
+2021-01-01,149821.0,Civilian Employment
+2020-12-01,149975.0,Civilian Employment
+2020-11-01,149934.0,Civilian Employment
+2020-10-01,149931.0,Civilian Employment
+2020-09-01,147620.0,Civilian Employment
+2020-08-01,147245.0,Civilian Employment
+2020-07-01,143779.0,Civilian Employment
+2020-06-01,142342.0,Civilian Employment
+2020-05-01,137173.0,Civilian Employment
+2020-04-01,133185.0,Civilian Employment
+2020-03-01,155353.0,Civilian Employment
+2020-02-01,158714.0,Civilian Employment
+2020-01-01,158508.0,Civilian Employment
+2019-12-01,158845.0,Civilian Employment
+2019-11-01,158629.0,Civilian Employment
+2019-10-01,158545.0,Civilian Employment
+2019-09-01,158339.0,Civilian Employment
+2019-08-01,157829.0,Civilian Employment
+2019-07-01,157529.0,Civilian Employment
+2019-06-01,157232.0,Civilian Employment
+2019-05-01,156821.0,Civilian Employment
+2019-04-01,156625.0,Civilian Employment
+2019-03-01,156701.0,Civilian Employment
+2019-02-01,156863.0,Civilian Employment
+2019-01-01,156487.0,Civilian Employment
+2018-12-01,156817.0,Civilian Employment
+2018-11-01,156721.0,Civilian Employment
+2018-10-01,156391.0,Civilian Employment
+2018-09-01,156015.0,Civilian Employment
+2018-08-01,155504.0,Civilian Employment
+2018-07-01,156146.0,Civilian Employment
+2018-06-01,155762.0,Civilian Employment
+2018-05-01,155652.0,Civilian Employment
+2018-04-01,155312.0,Civilian Employment
+2018-03-01,155214.0,Civilian Employment
+2018-02-01,155197.0,Civilian Employment
+2018-01-01,154425.0,Civilian Employment
+2017-12-01,153904.0,Civilian Employment
+2017-11-01,153805.0,Civilian Employment
+2017-10-01,153609.0,Civilian Employment
+2017-09-01,154286.0,Civilian Employment
+2017-08-01,153503.0,Civilian Employment
+2017-07-01,153569.0,Civilian Employment
+2017-06-01,153318.0,Civilian Employment
+2017-05-01,153069.0,Civilian Employment
+2017-04-01,153255.0,Civilian Employment
+2017-03-01,153065.0,Civilian Employment
+2017-02-01,152480.0,Civilian Employment
+2017-01-01,152152.0,Civilian Employment
+2016-12-01,152157.0,Civilian Employment
+2016-11-01,151954.0,Civilian Employment
+2016-10-01,151793.0,Civilian Employment
+2016-09-01,151761.0,Civilian Employment
+2016-08-01,151779.0,Civilian Employment
+2016-07-01,151554.0,Civilian Employment
+2016-06-01,151223.0,Civilian Employment
+2016-05-01,151132.0,Civilian Employment
+2016-04-01,151074.0,Civilian Employment
+2016-03-01,151218.0,Civilian Employment
+2016-02-01,150939.0,Civilian Employment
+2016-01-01,150653.0,Civilian Employment
+2015-12-01,150128.0,Civilian Employment
+2015-11-01,149463.0,Civilian Employment
+2015-10-01,149246.0,Civilian Employment
+2015-09-01,148826.0,Civilian Employment
+2015-08-01,149181.0,Civilian Employment
+2015-07-01,148830.0,Civilian Employment
+2015-06-01,148816.0,Civilian Employment
+2015-05-01,148817.0,Civilian Employment
+2015-04-01,148511.0,Civilian Employment
+2015-03-01,148128.0,Civilian Employment
+2015-02-01,148045.0,Civilian Employment
+2015-01-01,148145.0,Civilian Employment
+2014-12-01,147615.0,Civilian Employment
+2014-11-01,147404.0,Civilian Employment
+2014-10-01,147427.0,Civilian Employment
+2014-09-01,146778.0,Civilian Employment
+2014-08-01,146530.0,Civilian Employment
+2014-07-01,146399.0,Civilian Employment
+2014-06-01,146247.0,Civilian Employment
+2014-05-01,145825.0,Civilian Employment
+2014-04-01,145667.0,Civilian Employment
+2014-03-01,145648.0,Civilian Employment
+2014-02-01,145134.0,Civilian Employment
+2014-01-01,145150.0,Civilian Employment
+2026-03-01,7239.0,Civilian Unemployment
+2026-02-01,7571.0,Civilian Unemployment
+2026-01-01,7368.0,Civilian Unemployment
+2025-12-01,7503.0,Civilian Unemployment
+2025-11-01,7781.0,Civilian Unemployment
+2025-10-01,,Civilian Unemployment
+2025-09-01,7605.0,Civilian Unemployment
+2025-08-01,7380.0,Civilian Unemployment
+2025-07-01,7272.0,Civilian Unemployment
+2025-06-01,7054.0,Civilian Unemployment
+2025-05-01,7248.0,Civilian Unemployment
+2025-04-01,7155.0,Civilian Unemployment
+2025-03-01,7132.0,Civilian Unemployment
+2025-02-01,7104.0,Civilian Unemployment
+2025-01-01,6865.0,Civilian Unemployment
+2024-12-01,6920.0,Civilian Unemployment
+2024-11-01,7089.0,Civilian Unemployment
+2024-10-01,6951.0,Civilian Unemployment
+2024-09-01,6849.0,Civilian Unemployment
+2024-08-01,7063.0,Civilian Unemployment
+2024-07-01,7098.0,Civilian Unemployment
+2024-06-01,6881.0,Civilian Unemployment
+2024-05-01,6627.0,Civilian Unemployment
+2024-04-01,6486.0,Civilian Unemployment
+2024-03-01,6521.0,Civilian Unemployment
+2024-02-01,6486.0,Civilian Unemployment
+2024-01-01,6175.0,Civilian Unemployment
+2023-12-01,6329.0,Civilian Unemployment
+2023-11-01,6226.0,Civilian Unemployment
+2023-10-01,6463.0,Civilian Unemployment
+2023-09-01,6274.0,Civilian Unemployment
+2023-08-01,6275.0,Civilian Unemployment
+2023-07-01,5923.0,Civilian Unemployment
+2023-06-01,5985.0,Civilian Unemployment
+2023-05-01,6084.0,Civilian Unemployment
+2023-04-01,5747.0,Civilian Unemployment
+2023-03-01,5859.0,Civilian Unemployment
+2023-02-01,5987.0,Civilian Unemployment
+2023-01-01,5770.0,Civilian Unemployment
+2022-12-01,5781.0,Civilian Unemployment
+2022-11-01,5918.0,Civilian Unemployment
+2022-10-01,5949.0,Civilian Unemployment
+2022-09-01,5747.0,Civilian Unemployment
+2022-08-01,5909.0,Civilian Unemployment
+2022-07-01,5770.0,Civilian Unemployment
+2022-06-01,5975.0,Civilian Unemployment
+2022-05-01,5979.0,Civilian Unemployment
+2022-04-01,5995.0,Civilian Unemployment
+2022-03-01,6033.0,Civilian Unemployment
+2022-02-01,6323.0,Civilian Unemployment
+2022-01-01,6533.0,Civilian Unemployment
+2021-12-01,6413.0,Civilian Unemployment
+2021-11-01,6729.0,Civilian Unemployment
+2021-10-01,7267.0,Civilian Unemployment
+2021-09-01,7610.0,Civilian Unemployment
+2021-08-01,8269.0,Civilian Unemployment
+2021-07-01,8731.0,Civilian Unemployment
+2021-06-01,9481.0,Civilian Unemployment
+2021-05-01,9260.0,Civilian Unemployment
+2021-04-01,9754.0,Civilian Unemployment
+2021-03-01,9772.0,Civilian Unemployment
+2021-02-01,10013.0,Civilian Unemployment
+2021-01-01,10260.0,Civilian Unemployment
+2020-12-01,10770.0,Civilian Unemployment
+2020-11-01,10694.0,Civilian Unemployment
+2020-10-01,11072.0,Civilian Unemployment
+2020-09-01,12554.0,Civilian Unemployment
+2020-08-01,13461.0,Civilian Unemployment
+2020-07-01,16352.0,Civilian Unemployment
+2020-06-01,17652.0,Civilian Unemployment
+2020-05-01,20929.0,Civilian Unemployment
+2020-04-01,23084.0,Civilian Unemployment
+2020-03-01,7206.0,Civilian Unemployment
+2020-02-01,5753.0,Civilian Unemployment
+2020-01-01,5869.0,Civilian Unemployment
+2019-12-01,5853.0,Civilian Unemployment
+2019-11-01,5868.0,Civilian Unemployment
+2019-10-01,5871.0,Civilian Unemployment
+2019-09-01,5753.0,Civilian Unemployment
+2019-08-01,5945.0,Civilian Unemployment
+2019-07-01,6061.0,Civilian Unemployment
+2019-06-01,5935.0,Civilian Unemployment
+2019-05-01,5930.0,Civilian Unemployment
+2019-04-01,5961.0,Civilian Unemployment
+2019-03-01,6202.0,Civilian Unemployment
+2019-02-01,6136.0,Civilian Unemployment
+2019-01-01,6475.0,Civilian Unemployment
+2018-12-01,6389.0,Civilian Unemployment
+2018-11-01,6115.0,Civilian Unemployment
+2018-10-01,6211.0,Civilian Unemployment
+2018-09-01,6073.0,Civilian Unemployment
+2018-08-01,6156.0,Civilian Unemployment
+2018-07-01,6195.0,Civilian Unemployment
+2018-06-01,6447.0,Civilian Unemployment
+2018-05-01,6196.0,Civilian Unemployment
+2018-04-01,6459.0,Civilian Unemployment
+2018-03-01,6472.0,Civilian Unemployment
+2018-02-01,6581.0,Civilian Unemployment
+2018-01-01,6489.0,Civilian Unemployment
+2017-12-01,6632.0,Civilian Unemployment
+2017-11-01,6774.0,Civilian Unemployment
+2017-10-01,6700.0,Civilian Unemployment
+2017-09-01,6854.0,Civilian Unemployment
+2017-08-01,7082.0,Civilian Unemployment
+2017-07-01,6892.0,Civilian Unemployment
+2017-06-01,6873.0,Civilian Unemployment
+2017-05-01,7000.0,Civilian Unemployment
+2017-04-01,7089.0,Civilian Unemployment
+2017-03-01,7073.0,Civilian Unemployment
+2017-02-01,7379.0,Civilian Unemployment
+2017-01-01,7468.0,Civilian Unemployment
+2016-12-01,7521.0,Civilian Unemployment
+2016-11-01,7553.0,Civilian Unemployment
+2016-10-01,7811.0,Civilian Unemployment
+2016-09-01,7953.0,Civilian Unemployment
+2016-08-01,7784.0,Civilian Unemployment
+2016-07-01,7641.0,Civilian Unemployment
+2016-06-01,7744.0,Civilian Unemployment
+2016-05-01,7652.0,Civilian Unemployment
+2016-04-01,8067.0,Civilian Unemployment
+2016-03-01,7961.0,Civilian Unemployment
+2016-02-01,7702.0,Civilian Unemployment
+2016-01-01,7627.0,Civilian Unemployment
+2015-12-01,7907.0,Civilian Unemployment
+2015-11-01,8000.0,Civilian Unemployment
+2015-10-01,7922.0,Civilian Unemployment
+2015-09-01,7907.0,Civilian Unemployment
+2015-08-01,7992.0,Civilian Unemployment
+2015-07-01,8167.0,Civilian Unemployment
+2015-06-01,8247.0,Civilian Unemployment
+2015-05-01,8834.0,Civilian Unemployment
+2015-04-01,8550.0,Civilian Unemployment
+2015-03-01,8515.0,Civilian Unemployment
+2015-02-01,8599.0,Civilian Unemployment
+2015-01-01,8885.0,Civilian Unemployment
+2014-12-01,8717.0,Civilian Unemployment
+2014-11-01,9090.0,Civilian Unemployment
+2014-10-01,8990.0,Civilian Unemployment
+2014-09-01,9262.0,Civilian Unemployment
+2014-08-01,9599.0,Civilian Unemployment
+2014-07-01,9608.0,Civilian Unemployment
+2014-06-01,9460.0,Civilian Unemployment
+2014-05-01,9859.0,Civilian Unemployment
+2014-04-01,9702.0,Civilian Unemployment
+2014-03-01,10380.0,Civilian Unemployment
+2014-02-01,10349.0,Civilian Unemployment
+2014-01-01,10202.0,Civilian Unemployment
+2026-03-01,4.3,Unemployment Rate
+2026-02-01,4.4,Unemployment Rate
+2026-01-01,4.3,Unemployment Rate
+2025-12-01,4.4,Unemployment Rate
+2025-11-01,4.5,Unemployment Rate
+2025-10-01,,Unemployment Rate
+2025-09-01,4.4,Unemployment Rate
+2025-08-01,4.3,Unemployment Rate
+2025-07-01,4.3,Unemployment Rate
+2025-06-01,4.1,Unemployment Rate
+2025-05-01,4.3,Unemployment Rate
+2025-04-01,4.2,Unemployment Rate
+2025-03-01,4.2,Unemployment Rate
+2025-02-01,4.2,Unemployment Rate
+2025-01-01,4.0,Unemployment Rate
+2024-12-01,4.1,Unemployment Rate
+2024-11-01,4.2,Unemployment Rate
+2024-10-01,4.1,Unemployment Rate
+2024-09-01,4.1,Unemployment Rate
+2024-08-01,4.2,Unemployment Rate
+2024-07-01,4.2,Unemployment Rate
+2024-06-01,4.1,Unemployment Rate
+2024-05-01,3.9,Unemployment Rate
+2024-04-01,3.9,Unemployment Rate
+2024-03-01,3.9,Unemployment Rate
+2024-02-01,3.9,Unemployment Rate
+2024-01-01,3.7,Unemployment Rate
+2023-12-01,3.8,Unemployment Rate
+2023-11-01,3.7,Unemployment Rate
+2023-10-01,3.9,Unemployment Rate
+2023-09-01,3.7,Unemployment Rate
+2023-08-01,3.7,Unemployment Rate
+2023-07-01,3.5,Unemployment Rate
+2023-06-01,3.6,Unemployment Rate
+2023-05-01,3.6,Unemployment Rate
+2023-04-01,3.4,Unemployment Rate
+2023-03-01,3.5,Unemployment Rate
+2023-02-01,3.6,Unemployment Rate
+2023-01-01,3.5,Unemployment Rate
+2022-12-01,3.5,Unemployment Rate
+2022-11-01,3.6,Unemployment Rate
+2022-10-01,3.6,Unemployment Rate
+2022-09-01,3.5,Unemployment Rate
+2022-08-01,3.6,Unemployment Rate
+2022-07-01,3.5,Unemployment Rate
+2022-06-01,3.6,Unemployment Rate
+2022-05-01,3.6,Unemployment Rate
+2022-04-01,3.7,Unemployment Rate
+2022-03-01,3.7,Unemployment Rate
+2022-02-01,3.9,Unemployment Rate
+2022-01-01,4.0,Unemployment Rate
+2021-12-01,3.9,Unemployment Rate
+2021-11-01,4.1,Unemployment Rate
+2021-10-01,4.5,Unemployment Rate
+2021-09-01,4.7,Unemployment Rate
+2021-08-01,5.1,Unemployment Rate
+2021-07-01,5.4,Unemployment Rate
+2021-06-01,5.9,Unemployment Rate
+2021-05-01,5.8,Unemployment Rate
+2021-04-01,6.1,Unemployment Rate
+2021-03-01,6.1,Unemployment Rate
+2021-02-01,6.2,Unemployment Rate
+2021-01-01,6.4,Unemployment Rate
+2020-12-01,6.7,Unemployment Rate
+2020-11-01,6.7,Unemployment Rate
+2020-10-01,6.9,Unemployment Rate
+2020-09-01,7.8,Unemployment Rate
+2020-08-01,8.4,Unemployment Rate
+2020-07-01,10.2,Unemployment Rate
+2020-06-01,11.0,Unemployment Rate
+2020-05-01,13.2,Unemployment Rate
+2020-04-01,14.8,Unemployment Rate
+2020-03-01,4.4,Unemployment Rate
+2020-02-01,3.5,Unemployment Rate
+2020-01-01,3.6,Unemployment Rate
+2019-12-01,3.6,Unemployment Rate
+2019-11-01,3.6,Unemployment Rate
+2019-10-01,3.6,Unemployment Rate
+2019-09-01,3.5,Unemployment Rate
+2019-08-01,3.6,Unemployment Rate
+2019-07-01,3.7,Unemployment Rate
+2019-06-01,3.6,Unemployment Rate
+2019-05-01,3.6,Unemployment Rate
+2019-04-01,3.7,Unemployment Rate
+2019-03-01,3.8,Unemployment Rate
+2019-02-01,3.8,Unemployment Rate
+2019-01-01,4.0,Unemployment Rate
+2018-12-01,3.9,Unemployment Rate
+2018-11-01,3.8,Unemployment Rate
+2018-10-01,3.8,Unemployment Rate
+2018-09-01,3.7,Unemployment Rate
+2018-08-01,3.8,Unemployment Rate
+2018-07-01,3.8,Unemployment Rate
+2018-06-01,4.0,Unemployment Rate
+2018-05-01,3.8,Unemployment Rate
+2018-04-01,4.0,Unemployment Rate
+2018-03-01,4.0,Unemployment Rate
+2018-02-01,4.1,Unemployment Rate
+2018-01-01,4.0,Unemployment Rate
+2017-12-01,4.1,Unemployment Rate
+2017-11-01,4.2,Unemployment Rate
+2017-10-01,4.2,Unemployment Rate
+2017-09-01,4.3,Unemployment Rate
+2017-08-01,4.4,Unemployment Rate
+2017-07-01,4.3,Unemployment Rate
+2017-06-01,4.3,Unemployment Rate
+2017-05-01,4.4,Unemployment Rate
+2017-04-01,4.4,Unemployment Rate
+2017-03-01,4.4,Unemployment Rate
+2017-02-01,4.6,Unemployment Rate
+2017-01-01,4.7,Unemployment Rate
+2016-12-01,4.7,Unemployment Rate
+2016-11-01,4.7,Unemployment Rate
+2016-10-01,4.9,Unemployment Rate
+2016-09-01,5.0,Unemployment Rate
+2016-08-01,4.9,Unemployment Rate
+2016-07-01,4.8,Unemployment Rate
+2016-06-01,4.9,Unemployment Rate
+2016-05-01,4.8,Unemployment Rate
+2016-04-01,5.1,Unemployment Rate
+2016-03-01,5.0,Unemployment Rate
+2016-02-01,4.9,Unemployment Rate
+2016-01-01,4.8,Unemployment Rate
+2015-12-01,5.0,Unemployment Rate
+2015-11-01,5.1,Unemployment Rate
+2015-10-01,5.0,Unemployment Rate
+2015-09-01,5.0,Unemployment Rate
+2015-08-01,5.1,Unemployment Rate
+2015-07-01,5.2,Unemployment Rate
+2015-06-01,5.3,Unemployment Rate
+2015-05-01,5.6,Unemployment Rate
+2015-04-01,5.4,Unemployment Rate
+2015-03-01,5.4,Unemployment Rate
+2015-02-01,5.5,Unemployment Rate
+2015-01-01,5.7,Unemployment Rate
+2014-12-01,5.6,Unemployment Rate
+2014-11-01,5.8,Unemployment Rate
+2014-10-01,5.7,Unemployment Rate
+2014-09-01,5.9,Unemployment Rate
+2014-08-01,6.1,Unemployment Rate
+2014-07-01,6.2,Unemployment Rate
+2014-06-01,6.1,Unemployment Rate
+2014-05-01,6.3,Unemployment Rate
+2014-04-01,6.2,Unemployment Rate
+2014-03-01,6.7,Unemployment Rate
+2014-02-01,6.7,Unemployment Rate
+2014-01-01,6.6,Unemployment Rate
+2026-03-01,158637.0,Total Nonfarm Employment
+2026-02-01,158459.0,Total Nonfarm Employment
+2026-01-01,158592.0,Total Nonfarm Employment
+2025-12-01,158432.0,Total Nonfarm Employment
+2025-11-01,158449.0,Total Nonfarm Employment
+2025-10-01,158408.0,Total Nonfarm Employment
+2025-09-01,158548.0,Total Nonfarm Employment
+2025-08-01,158472.0,Total Nonfarm Employment
+2025-07-01,158542.0,Total Nonfarm Employment
+2025-06-01,158478.0,Total Nonfarm Employment
+2025-05-01,158498.0,Total Nonfarm Employment
+2025-04-01,158485.0,Total Nonfarm Employment
+2025-03-01,158377.0,Total Nonfarm Employment
+2025-02-01,158310.0,Total Nonfarm Employment
+2025-01-01,158268.0,Total Nonfarm Employment
+2024-12-01,158316.0,Total Nonfarm Employment
+2024-11-01,158079.0,Total Nonfarm Employment
+2024-10-01,157945.0,Total Nonfarm Employment
+2024-09-01,157912.0,Total Nonfarm Employment
+2024-08-01,157757.0,Total Nonfarm Employment
+2024-07-01,157748.0,Total Nonfarm Employment
+2024-06-01,157695.0,Total Nonfarm Employment
+2024-05-01,157608.0,Total Nonfarm Employment
+2024-04-01,157530.0,Total Nonfarm Employment
+2024-03-01,157466.0,Total Nonfarm Employment
+2024-02-01,157238.0,Total Nonfarm Employment
+2024-01-01,157032.0,Total Nonfarm Employment
+2023-12-01,156857.0,Total Nonfarm Employment
+2023-11-01,156703.0,Total Nonfarm Employment
+2023-10-01,156576.0,Total Nonfarm Employment
+2023-09-01,156417.0,Total Nonfarm Employment
+2023-08-01,156261.0,Total Nonfarm Employment
+2023-07-01,156043.0,Total Nonfarm Employment
+2023-06-01,155880.0,Total Nonfarm Employment
+2023-05-01,155655.0,Total Nonfarm Employment
+2023-04-01,155375.0,Total Nonfarm Employment
+2023-03-01,155134.0,Total Nonfarm Employment
+2023-02-01,155066.0,Total Nonfarm Employment
+2023-01-01,154776.0,Total Nonfarm Employment
+2022-12-01,154342.0,Total Nonfarm Employment
+2022-11-01,154242.0,Total Nonfarm Employment
+2022-10-01,153939.0,Total Nonfarm Employment
+2022-09-01,153582.0,Total Nonfarm Employment
+2022-08-01,153362.0,Total Nonfarm Employment
+2022-07-01,153072.0,Total Nonfarm Employment
+2022-06-01,152358.0,Total Nonfarm Employment
+2022-05-01,151924.0,Total Nonfarm Employment
+2022-04-01,151623.0,Total Nonfarm Employment
+2022-03-01,151315.0,Total Nonfarm Employment
+2022-02-01,150825.0,Total Nonfarm Employment
+2022-01-01,150006.0,Total Nonfarm Employment
+2021-12-01,149816.0,Total Nonfarm Employment
+2021-11-01,149230.0,Total Nonfarm Employment
+2021-10-01,148572.0,Total Nonfarm Employment
+2021-09-01,147771.0,Total Nonfarm Employment
+2021-08-01,147314.0,Total Nonfarm Employment
+2021-07-01,146762.0,Total Nonfarm Employment
+2021-06-01,145820.0,Total Nonfarm Employment
+2021-05-01,145065.0,Total Nonfarm Employment
+2021-04-01,144587.0,Total Nonfarm Employment
+2021-03-01,144232.0,Total Nonfarm Employment
+2021-02-01,143380.0,Total Nonfarm Employment
+2021-01-01,142863.0,Total Nonfarm Employment
+2020-12-01,142548.0,Total Nonfarm Employment
+2020-11-01,142733.0,Total Nonfarm Employment
+2020-10-01,142460.0,Total Nonfarm Employment
+2020-09-01,141770.0,Total Nonfarm Employment
+2020-08-01,140821.0,Total Nonfarm Employment
+2020-07-01,139255.0,Total Nonfarm Employment
+2020-06-01,137671.0,Total Nonfarm Employment
+2020-05-01,133040.0,Total Nonfarm Employment
+2020-04-01,130426.0,Total Nonfarm Employment
+2020-03-01,150895.0,Total Nonfarm Employment
+2020-02-01,152293.0,Total Nonfarm Employment
+2020-01-01,152031.0,Total Nonfarm Employment
+2019-12-01,151794.0,Total Nonfarm Employment
+2019-11-01,151667.0,Total Nonfarm Employment
+2019-10-01,151460.0,Total Nonfarm Employment
+2019-09-01,151365.0,Total Nonfarm Employment
+2019-08-01,151169.0,Total Nonfarm Employment
+2019-07-01,150937.0,Total Nonfarm Employment
+2019-06-01,150838.0,Total Nonfarm Employment
+2019-05-01,150618.0,Total Nonfarm Employment
+2019-04-01,150591.0,Total Nonfarm Employment
+2019-03-01,150295.0,Total Nonfarm Employment
+2019-02-01,150067.0,Total Nonfarm Employment
+2019-01-01,150060.0,Total Nonfarm Employment
+2018-12-01,149809.0,Total Nonfarm Employment
+2018-11-01,149617.0,Total Nonfarm Employment
+2018-10-01,149527.0,Total Nonfarm Employment
+2018-09-01,149358.0,Total Nonfarm Employment
+2018-08-01,149277.0,Total Nonfarm Employment
+2018-07-01,149020.0,Total Nonfarm Employment
+2018-06-01,148960.0,Total Nonfarm Employment
+2018-05-01,148742.0,Total Nonfarm Employment
+2018-04-01,148420.0,Total Nonfarm Employment
+2018-03-01,148280.0,Total Nonfarm Employment
+2018-02-01,148054.0,Total Nonfarm Employment
+2018-01-01,147660.0,Total Nonfarm Employment
+2017-12-01,147523.0,Total Nonfarm Employment
+2017-11-01,147372.0,Total Nonfarm Employment
+2017-10-01,147149.0,Total Nonfarm Employment
+2017-09-01,147008.0,Total Nonfarm Employment
+2017-08-01,146919.0,Total Nonfarm Employment
+2017-07-01,146772.0,Total Nonfarm Employment
+2017-06-01,146583.0,Total Nonfarm Employment
+2017-05-01,146380.0,Total Nonfarm Employment
+2017-04-01,146175.0,Total Nonfarm Employment
+2017-03-01,145970.0,Total Nonfarm Employment
+2017-02-01,145846.0,Total Nonfarm Employment
+2017-01-01,145628.0,Total Nonfarm Employment
+2016-12-01,145408.0,Total Nonfarm Employment
+2016-11-01,145183.0,Total Nonfarm Employment
+2016-10-01,145065.0,Total Nonfarm Employment
+2016-09-01,144967.0,Total Nonfarm Employment
+2016-08-01,144661.0,Total Nonfarm Employment
+2016-07-01,144520.0,Total Nonfarm Employment
+2016-06-01,144147.0,Total Nonfarm Employment
+2016-05-01,143900.0,Total Nonfarm Employment
+2016-04-01,143854.0,Total Nonfarm Employment
+2016-03-01,143662.0,Total Nonfarm Employment
+2016-02-01,143406.0,Total Nonfarm Employment
+2016-01-01,143210.0,Total Nonfarm Employment
+2015-12-01,143077.0,Total Nonfarm Employment
+2015-11-01,142808.0,Total Nonfarm Employment
+2015-10-01,142579.0,Total Nonfarm Employment
+2015-09-01,142275.0,Total Nonfarm Employment
+2015-08-01,142125.0,Total Nonfarm Employment
+2015-07-01,141991.0,Total Nonfarm Employment
+2015-06-01,141709.0,Total Nonfarm Employment
+2015-05-01,141538.0,Total Nonfarm Employment
+2015-04-01,141196.0,Total Nonfarm Employment
+2015-03-01,140923.0,Total Nonfarm Employment
+2015-02-01,140827.0,Total Nonfarm Employment
+2015-01-01,140568.0,Total Nonfarm Employment
+2014-12-01,140364.0,Total Nonfarm Employment
+2014-11-01,140089.0,Total Nonfarm Employment
+2014-10-01,139798.0,Total Nonfarm Employment
+2014-09-01,139563.0,Total Nonfarm Employment
+2014-08-01,139269.0,Total Nonfarm Employment
+2014-07-01,139072.0,Total Nonfarm Employment
+2014-06-01,138849.0,Total Nonfarm Employment
+2014-05-01,138513.0,Total Nonfarm Employment
+2014-04-01,138298.0,Total Nonfarm Employment
+2014-03-01,137985.0,Total Nonfarm Employment
+2014-02-01,137712.0,Total Nonfarm Employment
+2014-01-01,137561.0,Total Nonfarm Employment
