@@ -1,0 +1,46 @@
+name: test_the_update_sequence
+
+on:
+  schedule:
+    - cron: "0 0 10 * *" 
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  aquire-and-update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+ 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+          cache: "pip"
+          cache-dependency-path: stuff.txt
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r stuff.txt
+
+
+      - name: Grab and process BLS data
+        run: python main_code.py
+
+      - name: Commit and push changes
+        run: |
+          if git status --porcelain | grep -E "bls_data.csv|\.streamlit/setup.toml"; then
+            git config --global user.name "ellerbee14"
+            git config --global user.email "ellerbeeandrew@gmail.com"
+            git add bls_data.csv .streamlit/setup.toml
+            git commit -m "Update BLS data and theme (automated)"
+            git push
+          else
+            echo "No changes to commit"
+          fi
