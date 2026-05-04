@@ -1,0 +1,1 @@
+This repository pulls US BLS data using the BLS api using and automated gethub workflow. The data is updated at a tenoor of every 10 days and can be found at https://blsdashboardfinal-dtrcrmufxcneytccfpfkpv.streamlit.app/.
