@@ -1,0 +1,16 @@
+[theme]
+
+#main color scheme
+primaryColor = "#228B22"  # Forest Green because its sick
+
+#backround
+backgroundColor = "#FAFAFA"
+
+#other backroundf
+secondaryBackgroundColor = "#E9ECEF"
+
+# text
+textColor = "#212529"  
+
+# Font 
+font = "monospace"
