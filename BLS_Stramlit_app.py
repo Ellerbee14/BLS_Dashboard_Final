@@ -96,18 +96,24 @@ def metric_card(col, title, df_idxed, column, color, chart_type, timeframe):
             else:
                 st.area_chart(chart_df, y=column, color=color, height=150)
 
-@st.cache_data(ttl="1d")
+@st.cache_data
 def fetch_and_process_bls(series_ids, startyear: int, endyear: int):
-    df = pd.read_csv(GITHUB_CSV_URL)
-    df["DATE"] = pd.to_datetime(df["DATE"])
+    path = "bls_data.csv"
+    if not os.path.exists(path):
+        return None, None
+    df = pd.read_csv(path, parse_dates=["DATE"])
     df = df.sort_values("DATE")
-
     df = df[
         (df["DATE"].dt.year >= startyear) &
         (df["DATE"].dt.year <= endyear)]
 
+    if df.empty:
+        return None, None
+
     dfs = {}
     for sid, name in SERIES_NAMES.items():
+        if name not in df.columns:
+            raise ValueError(f"Missing column in CSV: {name}")
         dfs[sid] = df[["DATE", name]].copy()
 
     return df.reset_index(drop=True), dfs
