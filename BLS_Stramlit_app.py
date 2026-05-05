@@ -132,56 +132,30 @@ def metric_card(col, title, df_idxed, column, color, chart_type, timeframe):
 
 @st.cache_data(ttl="1d")
 def fetch_and_process_bls(series_ids, startyear: int, endyear: int):
-    payload = {
-        "seriesid": series_ids,
-        "startyear": str(startyear),
-        "endyear": str(endyear),}
+    df = pd.read_csv("https://raw.githubusercontent.com/Ellerbee14/BLS_Dashboard_Final/main/bls_data.csv")
+    if "DATE" not in df.columns:
+        raise ValueError("CSV must contain a DATE column")
 
-    r = requests.post(
-        BLS_URL,
-        headers=HEADERS,
-        json=payload,      
-        timeout=30)
-    r.raise_for_status()
-    js = r.json()
+    df["DATE"] = pd.to_datetime(df["DATE"])
+    df = df.sort_values("DATE")
 
-    if js.get("status") != "REQUEST_SUCCEEDED":
-        msg = js.get("message", ["Unknown error"])
-        raise RuntimeError(f"BLS API error: {msg}")
+    df = df[
+        (df["DATE"].dt.year >= startyear) &
+        (df["DATE"].dt.year <= endyear)]
 
-    rows = []
-    for series in js["Results"]["series"]:
-        sid = series["seriesID"]
-        for item in series["data"]:
-            period = item.get("period", "")
-            if not (period.startswith("M") and period[1:].isdigit()):
-                continue
-            month = int(period[1:])
-            if month < 1 or month > 12:
-                continue
+    if df.empty:
+        raise RuntimeError("No data available for selected year range")
 
-            year = int(item["year"])
-            value = float(item["value"])
-            date = pd.Timestamp(year=year, month=month, day=1)
-
-            rows.append({"DATE": date, "seriesID": sid, "value": value})
-
-    long_df = pd.DataFrame(rows)
-    if long_df.empty:
-        raise RuntimeError("No monthly data returned from BLS API.")
-
-    wide = (
-        long_df.pivot_table(index="DATE", columns="seriesID", values="value", aggfunc="mean")
-               .rename(columns=SERIES_NAMES)
-               .sort_index()
-               .reset_index())
     dfs = {}
     for sid, name in SERIES_NAMES.items():
-        tmp = long_df[long_df["seriesID"] == sid][["DATE", "value"]].copy()
-        tmp = tmp.sort_values("DATE").rename(columns={"value": name})
-        dfs[sid] = tmp
+        if name not in df.columns:
+            raise ValueError(f"Missing column in CSV: {name}")
 
-    return wide, dfs
+        tmp = df[["DATE", name]].copy()
+        dfs[sid] = tmp.sort_values("DATE")
+    combined_df = df.reset_index(drop=True)
+
+    return combined_df, dfs
 
 st.title("BLS Dashboard")
 st.write("Labor statistics collected from the BLS Public Data API.")
