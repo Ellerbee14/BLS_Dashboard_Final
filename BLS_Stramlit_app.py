@@ -6,7 +6,7 @@ from datetime import datetime
 
 st.set_page_config(page_title="BLS Dashboard", layout="wide")
 
-GITHUB_CSV_URL = "https://raw.githubusercontent.com/Ellerbee14/BLS_Dashboard_Final/main/bls_data.csv"
+GITHUB_CSV_URL = ("https://raw.githubusercontent.com/Ellerbee14/BLS_Dashboard_Final/main/bls_data.csv")
 
 SERIES_NAMES = {
     "LNS11000000": "Civilian Labor Force",
@@ -14,15 +14,13 @@ SERIES_NAMES = {
     "LNS14000000": "Unemployment Rate",
     "LNS12000000": "Civilian Employment",
     "CES0000000001": "Total Nonfarm Employment",}
-SERIES_IDS = list(SERIES_NAMES.keys())
 
 METRICS = [
     ("Civilian Labor Force", "Civilian Labor Force", "#29b5e8"),
     ("Civilian Unemployment", "Civilian Unemployment", "#FF9F36"),
     ("Unemployment Rate", "Unemployment Rate", "#D45B90"),
     ("Civilian Employment", "Civilian Employment", "#7D44CF"),
-    ("Total Nonfarm Employment", "Total Nonfarm Employment", "#2ECC71"),]
-
+    ("Total Nonfarm Employment", "Total Nonfarm Employment", "#2ECC71"), ]
 
 _CONTAINER_SUPPORTS_BORDER = "border" in inspect.signature(st.container).parameters
 
@@ -31,13 +29,13 @@ def _container_kwargs():
 
 def safe_bar_chart(df, *, y=None, color=None, height=150):
     try:
-        st.bar_chart(df, y=y, color=color, height=height)  
+        st.bar_chart(df, y=y, color=color, height=height)
     except TypeError:
         st.bar_chart(df, y=y, height=height)
 
 def safe_area_chart(df, *, y=None, color=None, height=150):
     try:
-        st.area_chart(df, y=y, color=color, height=height)  
+        st.area_chart(df, y=y, color=color, height=height)
     except TypeError:
         st.area_chart(df, y=y, height=height)
 
@@ -67,10 +65,10 @@ def custom_quarter_period(dts: pd.Series) -> pd.PeriodIndex:
         else 2 if mm in (5, 6, 7)
         else 3 if mm in (8, 9, 10)
         else 4).to_numpy()
-
     y_adj = y.copy()
     y_adj[m == 1] -= 1
-    return pd.PeriodIndex([f"{yy}Q{qq}" for yy, qq in zip(y_adj, q)], freq="Q")
+    return pd.PeriodIndex(
+        [f"{yy}Q{qq}" for yy, qq in zip(y_adj, q)], freq="Q")
 
 def aggregate_for_timeframe(df: pd.DataFrame, timeframe: str) -> pd.DataFrame:
     df = df.copy()
@@ -100,14 +98,15 @@ def metric_card(col, title, df_idxed, column, color, chart_type, timeframe):
             s = df_idxed[column]
             last_val = s.dropna().iloc[-1] if s.dropna().size else None
             delta, delta_pct = calc_delta(s)
-
             is_rate = "Rate" in column
-            val_str = format_with_commas(last_val, decimals=2 if is_rate else 0)
+            val_str = format_with_commas(
+                last_val, decimals=2 if is_rate else 0)
             delta_str = (
                 f"{delta:+,.2f} ({delta_pct:+.2f}%)"
-                if is_rate else f"{delta:+,.0f} ({delta_pct:+.2f}%)")
-
+                if is_rate
+                else f"{delta:+,.0f} ({delta_pct:+.2f}%)" )
             st.metric(title, val_str, delta=delta_str)
+
             chart_df = s.to_frame(name=column)
             if timeframe == "Quarterly":
                 chart_df.index = chart_df.index.astype(str)
@@ -116,63 +115,55 @@ def metric_card(col, title, df_idxed, column, color, chart_type, timeframe):
             else:
                 safe_area_chart(chart_df, y=column, color=color, height=150)
 
-@st.cache_data(show_spinner="Loading BLS data...")
-def fetch_and_process_bls(_series_ids, startyear: int, endyear: int):
-    df = None
+@st.cache_data(show_spinner="Loading BLS data…")
+def fetch_and_process_bls(startyear: int, endyear: int):
     errors = []
-
     try:
         df = pd.read_csv(GITHUB_CSV_URL, parse_dates=["date"])
     except Exception as e:
         errors.append(f"GitHub load failed: {e}")
+        return None, errors
 
-    if df is None:
-        path = "bls_data.csv"
-        if os.path.exists(path):
-            try:
-                df = pd.read_csv(path, parse_dates=["date"])
-            except Exception as e:
-                errors.append(f"Local CSV load failed: {e}")
-        else:
-            errors.append("Local CSV not found: bls_data.csv")
-
-    if df is None or df.empty:
-        return None, None, errors
+    df = (
+        df.pivot(index="date", columns="series_name", values="value")
+          .reset_index())
 
     df = df.sort_values("date")
-    df = df[(df["date"].dt.year >= startyear) & (df["date"].dt.year <= endyear)]
+    df = df[
+        (df["date"].dt.year >= startyear) &
+        (df["date"].dt.year <= endyear)]
 
     if df.empty:
-        return None, None, [f"No rows found between {startyear} and {endyear}."] + errors
-    dfs = {}
-    for sid, name in SERIES_NAMES.items():
+        return None, [f"No rows found between {startyear} and {endyear}"]
+    for name in SERIES_NAMES.values():
         if name not in df.columns:
-            raise ValueError(f"Missing column in CSV: {name}")
-        dfs[sid] = df[["date", name]].copy()
+            errors.append(f"Missing column after pivot: {name}")
 
-    return df.reset_index(drop=True), dfs, errors
+    return df.reset_index(drop=True), errors
 
 st.title("BLS Dashboard")
-
 today_year = datetime.now().year
-default_start_year = 2014
-default_end_year = today_year
 
 with st.sidebar:
-    start_year = st.number_input("Start year", 1900, today_year, default_start_year)
-    end_year = st.number_input("End year", 1900, today_year, default_end_year)
-    time_frame = st.selectbox("Select time frame", ("Daily", "Weekly", "Monthly", "Quarterly"))
-    chart_selection = st.selectbox("Select chart type", ("Bar", "Area"))
+    start_year = st.number_input(
+        "Start year", 1900, today_year, 2014)
+    end_year = st.number_input(
+        "End year", 1900, today_year, today_year)
+    time_frame = st.selectbox(
+        "Select time frame",
+        ("Daily", "Weekly", "Monthly", "Quarterly"),)
+    chart_selection = st.selectbox(
+        "Select chart type", ("Bar", "Area"))
 
-combined_df, dataframes_dict, load_errors = fetch_and_process_bls(SERIES_IDS, start_year, end_year)
+combined_df, load_errors = fetch_and_process_bls(start_year, end_year)
 
 if load_errors:
     with st.expander("Data load diagnostics"):
-        for msg in load_errors:
-            st.write(msg)
+        for err in load_errors:
+            st.write(err)
 
 if combined_df is None or combined_df.empty:
-    st.error("No data could be loaded. Check the diagnostics above.")
+    st.error("No data available.")
     st.stop()
 
 df_display = aggregate_for_timeframe(combined_df, time_frame)
@@ -180,7 +171,14 @@ df_display = aggregate_for_timeframe(combined_df, time_frame)
 st.subheader("All Data: Current and Change")
 cols = st.columns(len(METRICS))
 for col, (title, column, color) in zip(cols, METRICS):
-    metric_card(col, title, df_display, column, color, chart_selection, time_frame)
+    metric_card(
+        col,
+        title,
+        df_display,
+        column,
+        color,
+        chart_selection,
+        time_frame,)
 
 st.markdown("### Combined Data Table")
 st.dataframe(combined_df, use_container_width=True)
