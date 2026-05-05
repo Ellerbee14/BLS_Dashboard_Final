@@ -1,7 +1,8 @@
-
 import streamlit as st
 import pandas as pd
-from datetime import datetime, timedelta
+import os
+import inspect
+from datetime import datetime
 
 st.set_page_config(page_title="BLS Dashboard", layout="wide")
 
@@ -21,6 +22,24 @@ METRICS = [
     ("Unemployment Rate", "Unemployment Rate", "#D45B90"),
     ("Civilian Employment", "Civilian Employment", "#7D44CF"),
     ("Total Nonfarm Employment", "Total Nonfarm Employment", "#2ECC71"),]
+
+
+_CONTAINER_SUPPORTS_BORDER = "border" in inspect.signature(st.container).parameters
+
+def _container_kwargs():
+    return {"border": True} if _CONTAINER_SUPPORTS_BORDER else {}
+
+def safe_bar_chart(df, *, y=None, color=None, height=150):
+    try:
+        st.bar_chart(df, y=y, color=color, height=height)  
+    except TypeError:
+        st.bar_chart(df, y=y, height=height)
+
+def safe_area_chart(df, *, y=None, color=None, height=150):
+    try:
+        st.area_chart(df, y=y, color=color, height=height)  
+    except TypeError:
+        st.area_chart(df, y=y, height=height)
 
 def format_with_commas(x, decimals=None):
     if x is None or (isinstance(x, float) and pd.isna(x)):
@@ -73,14 +92,15 @@ def aggregate_for_timeframe(df: pd.DataFrame, timeframe: str) -> pd.DataFrame:
         out = df.groupby("CUSTOM_Q")[value_cols].mean()
     else:
         raise ValueError("Unknown timeframe")
-    return out
+    return out.sort_index()
 
 def metric_card(col, title, df_idxed, column, color, chart_type, timeframe):
     with col:
-        with st.container(border=True):
+        with st.container(**_container_kwargs()):
             s = df_idxed[column]
             last_val = s.dropna().iloc[-1] if s.dropna().size else None
             delta, delta_pct = calc_delta(s)
+
             is_rate = "Rate" in column
             val_str = format_with_commas(last_val, decimals=2 if is_rate else 0)
             delta_str = (
@@ -92,37 +112,51 @@ def metric_card(col, title, df_idxed, column, color, chart_type, timeframe):
             if timeframe == "Quarterly":
                 chart_df.index = chart_df.index.astype(str)
             if chart_type == "Bar":
-                st.bar_chart(chart_df, y=column, color=color, height=150)
+                safe_bar_chart(chart_df, y=column, color=color, height=150)
             else:
-                st.area_chart(chart_df, y=column, color=color, height=150)
+                safe_area_chart(chart_df, y=column, color=color, height=150)
 
-@st.cache_data
-def fetch_and_process_bls(series_ids, startyear: int, endyear: int):
-    path = "bls_data.csv"
-    if not os.path.exists(path):
-        return None, None
-    df = pd.read_csv(path, parse_dates=["DATE"])
+@st.cache_data(show_spinner="Loading BLS data...")
+def fetch_and_process_bls(_series_ids, startyear: int, endyear: int):
+    df = None
+    errors = []
+
+    try:
+        df = pd.read_csv(GITHUB_CSV_URL, parse_dates=["DATE"])
+    except Exception as e:
+        errors.append(f"GitHub load failed: {e}")
+
+    if df is None:
+        path = "bls_data.csv"
+        if os.path.exists(path):
+            try:
+                df = pd.read_csv(path, parse_dates=["DATE"])
+            except Exception as e:
+                errors.append(f"Local CSV load failed: {e}")
+        else:
+            errors.append("Local CSV not found: bls_data.csv")
+
+    if df is None or df.empty:
+        return None, None, errors
+
     df = df.sort_values("DATE")
-    df = df[
-        (df["DATE"].dt.year >= startyear) &
-        (df["DATE"].dt.year <= endyear)]
+    df = df[(df["DATE"].dt.year >= startyear) & (df["DATE"].dt.year <= endyear)]
 
     if df.empty:
-        return None, None
-
+        return None, None, [f"No rows found between {startyear} and {endyear}."] + errors
     dfs = {}
     for sid, name in SERIES_NAMES.items():
         if name not in df.columns:
             raise ValueError(f"Missing column in CSV: {name}")
         dfs[sid] = df[["DATE", name]].copy()
 
-    return df.reset_index(drop=True), dfs
+    return df.reset_index(drop=True), dfs, errors
 
 st.title("BLS Dashboard")
 
 today_year = datetime.now().year
 default_start_year = 2014
-default_end_year = min(today_year, 2026)
+default_end_year = today_year
 
 with st.sidebar:
     start_year = st.number_input("Start year", 1900, today_year, default_start_year)
@@ -130,7 +164,16 @@ with st.sidebar:
     time_frame = st.selectbox("Select time frame", ("Daily", "Weekly", "Monthly", "Quarterly"))
     chart_selection = st.selectbox("Select chart type", ("Bar", "Area"))
 
-combined_df, dataframes_dict = fetch_and_process_bls(SERIES_IDS, start_year, end_year)
+combined_df, dataframes_dict, load_errors = fetch_and_process_bls(SERIES_IDS, start_year, end_year)
+
+if load_errors:
+    with st.expander("Data load diagnostics"):
+        for msg in load_errors:
+            st.write(msg)
+
+if combined_df is None or combined_df.empty:
+    st.error("No data could be loaded. Check the diagnostics above.")
+    st.stop()
 
 df_display = aggregate_for_timeframe(combined_df, time_frame)
 
