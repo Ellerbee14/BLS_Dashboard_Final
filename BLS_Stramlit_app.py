@@ -182,3 +182,42 @@ for col, (title, column, color) in zip(cols, METRICS):
 
 st.markdown("### Combined Data Table")
 st.dataframe(combined_df, use_container_width=True)
+
+@st.cache_data(ttl="1d")
+def to_csv_bytes(df_):
+    return df_.to_csv(index=False).encode("utf-8")
+st.markdown("### Download Data as CSV")
+
+st.download_button(
+    label="Download Combined Data",
+    data=to_csv_bytes(combined_df),
+    file_name="complete_bls_data.csv",
+    mime="text/csv",)
+
+
+st.subheader("Individual Data Series")
+
+for series_name in SERIES_NAMES.values():
+    df_one = (
+        combined_df[["date", series_name]]
+        .dropna()
+        .rename(columns={series_name: "value"})
+        .assign(series_name=series_name))
+
+    st.download_button(
+        label=f"Download {series_name}",
+        data=to_csv_bytes(df_one),
+        file_name=f"{series_name.replace(' ', '_').lower()}.csv",
+        mime="text/csv",)
+with st.expander("Raw Data Tables"):
+    for series_name in SERIES_NAMES.values():
+        st.subheader(series_name)
+
+        df_one = (
+            combined_df[["date", series_name]]
+            .dropna()
+            .rename(columns={series_name: "value"})
+            .assign(series_name=series_name))
+
+        st.dataframe(df_one, use_container_width=True)
+
