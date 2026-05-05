@@ -74,21 +74,21 @@ def custom_quarter_period(dts: pd.Series) -> pd.PeriodIndex:
 
 def aggregate_for_timeframe(df: pd.DataFrame, timeframe: str) -> pd.DataFrame:
     df = df.copy()
-    df["DATE"] = pd.to_datetime(df["DATE"])
-    df = df.sort_values("DATE")
+    df["date"] = pd.to_datetime(df["date"])
+    df = df.sort_values("date")
     value_cols = list(SERIES_NAMES.values())
 
     if timeframe == "Daily":
-        out = df.set_index("DATE")[value_cols]
+        out = df.set_index("date")[value_cols]
     elif timeframe == "Weekly":
         out = (
-            df.set_index("DATE")[value_cols]
+            df.set_index("date")[value_cols]
               .resample("W-MON", label="left", closed="left")
               .mean())
     elif timeframe == "Monthly":
-        out = df.set_index("DATE")[value_cols].resample("M").mean()
+        out = df.set_index("date")[value_cols].resample("M").mean()
     elif timeframe == "Quarterly":
-        df["CUSTOM_Q"] = custom_quarter_period(df["DATE"])
+        df["CUSTOM_Q"] = custom_quarter_period(df["date"])
         out = df.groupby("CUSTOM_Q")[value_cols].mean()
     else:
         raise ValueError("Unknown timeframe")
@@ -122,7 +122,7 @@ def fetch_and_process_bls(_series_ids, startyear: int, endyear: int):
     errors = []
 
     try:
-        df = pd.read_csv(GITHUB_CSV_URL, parse_dates=["DATE"])
+        df = pd.read_csv(GITHUB_CSV_URL, parse_dates=["date"])
     except Exception as e:
         errors.append(f"GitHub load failed: {e}")
 
@@ -130,7 +130,7 @@ def fetch_and_process_bls(_series_ids, startyear: int, endyear: int):
         path = "bls_data.csv"
         if os.path.exists(path):
             try:
-                df = pd.read_csv(path, parse_dates=["DATE"])
+                df = pd.read_csv(path, parse_dates=["date"])
             except Exception as e:
                 errors.append(f"Local CSV load failed: {e}")
         else:
@@ -139,8 +139,8 @@ def fetch_and_process_bls(_series_ids, startyear: int, endyear: int):
     if df is None or df.empty:
         return None, None, errors
 
-    df = df.sort_values("DATE")
-    df = df[(df["DATE"].dt.year >= startyear) & (df["DATE"].dt.year <= endyear)]
+    df = df.sort_values("date")
+    df = df[(df["date"].dt.year >= startyear) & (df["date"].dt.year <= endyear)]
 
     if df.empty:
         return None, None, [f"No rows found between {startyear} and {endyear}."] + errors
@@ -148,7 +148,7 @@ def fetch_and_process_bls(_series_ids, startyear: int, endyear: int):
     for sid, name in SERIES_NAMES.items():
         if name not in df.columns:
             raise ValueError(f"Missing column in CSV: {name}")
-        dfs[sid] = df[["DATE", name]].copy()
+        dfs[sid] = df[["date", name]].copy()
 
     return df.reset_index(drop=True), dfs, errors
 
