@@ -32,7 +32,7 @@ def format_with_commas(x, decimals=None):
     return f"{x:,.{decimals}f}"
 
 def calc_delta(series: pd.Series):
-    s = series.dropna()
+    s = series.ffill()
     if len(s) < 2:
         return 0.0, 0.0
     cur = s.iloc[-1]
@@ -40,7 +40,6 @@ def calc_delta(series: pd.Series):
     delta = cur - prev
     delta_pct = (delta / prev) * 100 if prev != 0 else 0.0
     return float(delta), float(delta_pct)
-
 
 def custom_quarter_period(dts: pd.Series) -> pd.PeriodIndex:
     dt = pd.to_datetime(dts)
@@ -51,12 +50,12 @@ def custom_quarter_period(dts: pd.Series) -> pd.PeriodIndex:
         lambda mm: 1 if mm in (2, 3, 4)
         else 2 if mm in (5, 6, 7)
         else 3 if mm in (8, 9, 10)
-        else 4).to_numpy()
+        else 4
+    ).to_numpy()
     y_adj = y.copy()
     y_adj[m == 1] = y_adj[m == 1] - 1
 
     return pd.PeriodIndex([f"{yy}Q{qq}" for yy, qq in zip(y_adj, q)], freq="Q")
-
 
 def aggregate_for_timeframe(df: pd.DataFrame, timeframe: str) -> pd.DataFrame:
     df = df.copy()
@@ -72,14 +71,38 @@ def aggregate_for_timeframe(df: pd.DataFrame, timeframe: str) -> pd.DataFrame:
             df.set_index("DATE")[value_cols]
               .resample("W-MON", label="left", closed="left")
               .mean())
-    #elif timeframe == "Monthly":
-     #   out = df.set_index("DATE")[value_cols].resample("M").mean()   #cant figure out how to get this one to work
-    elif timeframe == "Quarterly":                                     #this one kind of works but still cant get the data in the second section of graphs
+
+    elif timeframe == "Quarterly":
         df["CUSTOM_Q"] = custom_quarter_period(df["DATE"])
         out = df.groupby("CUSTOM_Q")[value_cols].mean()
     else:
         raise ValueError("Unknown timeframe")
     return out
+
+def metric_card(col, title, df_idxed, column, color, chart_type, timeframe):
+    with col:
+        with st.container(border=True):
+            s = df_idxed[column]
+            last_val = s.dropna().iloc[-1] if s.dropna().size else None
+            delta, delta_pct = calc_delta(s)
+
+            is_rate = "Rate" in column
+            val_str = format_with_commas(last_val, decimals=2 if is_rate else 0)
+
+            delta_str = (
+                f"{delta:+,.2f} ({delta_pct:+.2f}%)" if is_rate
+                else f"{delta:+,.0f} ({delta_pct:+.2f}%)")
+            st.metric(title, val_str, delta=delta_str)
+            chart_df = s.to_frame(name=column)
+
+            if timeframe == "Quarterly":
+                chart_df = chart_df.copy()
+                chart_df.index = chart_df.index.astype(str)
+
+            if chart_type == "Bar":
+                st.bar_chart(chart_df, y=column, color=color, height=150)
+            else:
+                st.area_chart(chart_df, y=column, color=color, height=150)
 
 
 def metric_card(col, title, df_idxed, column, color, chart_type, timeframe):
